@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #121214;
+  --text-color: #FFFFFF;
+  font-size: 62.5%;
+  --base-color: 250;
+  --bg-primary-color: hsla(var(--base-color), 100%, 63%, 0.13);
+  --primary-color: hsl(var(--base-color), 100%, 63%);
+}
+
+/* configurando para que a cor dos botões coloridos mudem conforme muda a var primary color. */
+.play svg path,
+.pause svg path,
+.sound-on svg path {
+  fill: var(--primary-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  min-height: 100vh;
+}
+
+main {
+  align-self: end;
+  justify-self: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button svg {
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+#timer {
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+  margin-bottom: 1.6rem;
+  display: flex;
+}
+
+#controls {
+  background-color: var(--bg-primary-color);
+  border-radius: 9999px;
+  gap: 3.2rem;
+  display: flex; 
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(8rem, 5rem + 10vw, 10.8rem);
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+footer {
+  align-self: end;
+  justify-self: right;
+  padding-right: 4rem;
+  padding-bottom: 3.2rem;
+}
+
+
